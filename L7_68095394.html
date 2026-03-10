@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AS7 68095394 Kampol Porntanyakij</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<style>
+    /* 1. วิดีโอพื้นหลังเต็มจอ */
+    #video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* 2. ทำให้ Card โปร่งใสแบบกระจกฝ้า */
+    .card {
+        background: rgba(255, 255, 255, 0.2) !important; /* ความโปร่งใส */
+        backdrop-filter: blur(10px); /* ความฟุ้งของกระจก */
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 15px;
+    }
+
+    /* 3. ปรับตัวหนังสือให้เด่นขึ้นบนพื้นหลังเข้ม */
+    .form-label, h4 {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    /* 4. จัดวางปุ่มควบคุมวิดีโอด้านล่าง */
+    .video-controls {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+</style>
+
+
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">68095394 Kampol Porntanyakij</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="L7_68095394.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="L7_68095394.html">Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="L7_68095394.html">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="L7_68095394.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <video autoplay loop muted id="video-bg">
+        <source src="VDO/204006-923133925_small.mp4" type="video/mp4">
+    </video>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-0 shadow">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h4 class="mb-0">แบบฟอร์มลงทะเบียน</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="#" method="post">
+                            
+                            <div class="mb-3">
+                                <label class="form-label">ชื่อ-นามสกุล:</label>
+                                <input type="text" class="form-control" placeholder="กรุณากรอกชื่อ-นามสกุล" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">อีเมล:</label>
+                                <input type="email" class="form-control" placeholder="example@domain.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">รหัสผ่าน:</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label d-block">เพศ:</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male">
+                                    <label class="form-check-label" for="male">ชาย</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female">
+                                    <label class="form-check-label" for="female">หญิง</label>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">ตำแหน่ง:</label>
+                                <select class="form-select" name="job_position">
+                                    <option value="" selected disabled>Please select a position</option>
+                                    <option value="manager">Manager</option>
+                                    <option value="developer">Developer</option>
+                                    <option value="designer">Designer</option>
+                                    <option value="marketing">Marketing</option>
+                                </select>
+                            </div>
+
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-success">ลงทะเบียน</button>
+                                <button type="reset" class="btn btn-danger">ล้างข้อมูล</button>
+                            </div>
+
+                            <div class="video-controls">
+                                <button onclick="playVid()" class="btn btn-outline-warning btn-sm">Play</button>
+                                <button onclick="pauseVid()" class="btn btn-outline-warning btn-sm">Stop</button>
+                            </div>
+                        
+                            <script>
+                                var vid = document.getElementById("video-bg");
+                                function playVid() { vid.play(); }
+                                function pauseVid() { vid.pause(); }
+                            </script>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
